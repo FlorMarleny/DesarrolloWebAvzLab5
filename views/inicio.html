@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Autos</title>
+    <!-- Agregar enlaces a los archivos CSS de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="/">Tienda de Autos</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/productos">Productos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/galeria">Galería</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/nosotros">Nosotros</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/chat">Chat</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="jumbotron text-center">
+      <h1>Bienvenido a nuestra tienda de Autos</h1>
+      <p>Explora nuestra amplia selección de autos de alta calidad</p>
+      <a href="/productos" class="btn btn-primary">Ver Autos</a>
+    </header>
+
+    <!-- Sección de destacados y ofertas -->
+    <section class="container mb-3">
+      <h2 class="text-center mb-5">Destacados y Ofertas</h2>
+      <div class="row">
+        <!-- Primer producto destacado -->
+        <div class="col-md-6">
+          <div class="card mb-4" style="height: 100%">
+            <img
+              src="/img/auto1.jpg"
+              class="card-img-top img-fluid"
+              alt="Auto 1"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Auto 1</h5>
+              <p class="card-text">Descripción del auto 1.</p>
+              <p class="card-text">$499.99</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Segundo producto destacado -->
+        <div class="col-md-6">
+          <div class="card mb-4" style="height: 100%">
+            <img
+              src="/img/auto3.jpg"
+              class="card-img-top img-fluid"
+              alt="Auto 2"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Auto 2</h5>
+              <p class="card-text">Descripción del auto 2.</p>
+              <p class="card-text">$599.99</p>
+              <a href="#" class="btn btn-primary">Comprar</a>
+            </div>
+          </div>
+        </div>
+        <!-- Agregar más productos aquí -->
+      </div>
+    </section>
+
+    <!-- Sección de testimonios y reseñas -->
+    <section class="container">
+      <h2 class="mb-3">Testimonios de Clientes</h2>
+      <div class="row">
+        <!-- Primer testimonio -->
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p class="mb-0">
+              Excelente tienda de Autos. Compré un auto aquí y estoy muy
+              satisfecho con la calidad y el servicio.
+            </p>
+            <footer class="blockquote-footer">Mario Martines</footer>
+          </blockquote>
+        </div>
+        <!-- Segundo testimonio -->
+        <div class="col-md-6">
+          <blockquote class="blockquote">
+            <p class="mb-0">
+              Los Autos de esta tienda son increíbles. ¡Definitivamente los
+              recomiendo!
+            </p>
+            <footer class="blockquote-footer">Marleny Rodríguez</footer>
+          </blockquote>
+        </div>
+        <!-- Agregar más testimonios aquí -->
+      </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p>&copy; 2023 Tienda de Autos</p>
+      </div>
+    </footer>
+
+    <!-- Agregar enlaces a los archivos JavaScript de Bootstrap y jQuery (si es necesario) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

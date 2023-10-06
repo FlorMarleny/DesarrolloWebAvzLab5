@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tienda de Autos</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <style>
+      /* Estilos CSS personalizados */
+      .cadr {
+        height: 80px;
+      }
+      .card-img-top {
+        object-fit: cover; /* Evita que las imágenes se deformen */
+        height: 150px;
+        width: 300; /* Altura fija para todas las imágenes */
+      }
+
+      .card-body {
+        padding: 10px;
+      }
+
+      .productos .row {
+        margin-top: 20px; /* Espacio entre las tarjetas */
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="/">Tienda de Autos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse " id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/galeria">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/chat">Comversemos</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="productos mt mb-5">
+        <h2 class="text-center mb-5 font-weight-bold">Nuestros Productos</h2>
+        <!-- Aquí puedes listar algunos de tus productos destacados -->
+        <div class="row row-cols-1 row-cols-md-4 g-4 mx-3">
+          <!-- Tarjeta 1 -->
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto1.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 2 -->
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto2.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 3 -->
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto3.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Tarjeta 4 -->
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto4.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Otras tarjetas aquí -->
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto5.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto6.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto7.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm ">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm ">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto8.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto9.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto10.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto11.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col mb-3">
+            <div class="card h-100 bg-white shadow imagen-animada">
+              <div class="position-absolute top-0 end-0 mt-2 me-2">
+                <i class="fas fa-heart text-danger"></i>
+              </div>
+              <img
+                src="/img/auto12.jpg"
+                class="card-img-top"
+                alt="Producto 1"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Autel Robotics EVO</h5>
+                <p class="card-text">
+                  Cámara de 48 megapíxeles que puede grabar video 4K a 60 fps. Ofrece un buen equilibrio entre<br />
+                
+                  <span class="fw-bold"
+                    >Precio: <span class="text-danger">$899</span></span
+                  >
+                </p>
+                <div class="text-end">
+                  <button type="button" class="btn btn-danger btn-sm">Detalles</button>
+                  <button type="button" class="btn btn-primary btn-sm">Comprar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Pie de página -->
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p>&copy; 2023 Tienda de Autos</p>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Socket.IO chat</title>
+
+    <!-- Agrega el enlace al archivo CSS de Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+
+    <!-- Agrega estilos personalizados -->
+    <style>
+      /* Estilos para el contenedor principal */
+      .chat-container {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        background-color: #f7f7f7;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        min-height: 70vh; /* Cambiado a min-height para evitar que el pie de página se superponga al contenido */
+      }
+
+      /* Estilos para el área de mensajes */
+      #messages-container {
+        overflow-y: auto;
+        flex-grow: 1; /* La caja de mensajes ocupará el espacio restante */
+      }
+
+      /* Estilos para el formulario de entrada */
+      form {
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        width: 100%; /* El formulario tendrá el mismo ancho que la caja */
+      }
+
+      /* Estilo para el botón de enviar */
+      button {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      /* Estilo para el campo de entrada de texto */
+      input#m {
+        flex-grow: 1;
+        margin-right: 10px;
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      /* Estilo para el pie de página */
+      footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background-color: #343a40; /* Color de fondo del footer */
+        color: #fff; /* Color del texto del footer */
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+        <div class="container">
+          <a class="navbar-brand" href="/">Tienda de Autos</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/productos">Productos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/galeria">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/nosotros">Nosotros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/chat">Chat</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="container">
+      <div class="chat-container">
+        <div id="messages-container">
+          <ul id="messages"></ul>
+        </div>
+        <!-- Formulario dentro de la caja de mensajes -->
+        <form action="">
+          <input id="m" autocomplete="off" placeholder="Escribe tu mensaje" />
+          <button type="submit">Enviar</button>
+        </form>
+      </div>
+    </div>
+    <footer class="bg-dark text-light text-center py-3">
+      <div class="container">
+        <p>&copy; 2023 Tienda de Autos</p>
+      </div>
+    </footer>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function () {
+        var socket = io();
+        $("form").submit(function () {
+          socket.emit("chat message", $("#m").val());
+          $("#m").val("");
+          return false;
+        });
+        socket.on("recibido", function (objeto) {
+          $("#messages").append(
+            $("<li>").text(objeto.txt + " - " + objeto.date)
+          );
+          $("#messages-container").scrollTop(
+            $("#messages-container")[0].scrollHeight
+          );
+        });
+      });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> <!-- Agrega Bootstrap JS -->
+  </body>
+</html>
